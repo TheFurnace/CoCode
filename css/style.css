@@ -1,14 +1,16 @@
-*{
+* {
 	box-sizing: border-box;
 	font-family: 'Inconsolata', monospace;
-	margin: 0;
+	margin: 0px;
 }
 
-.welcome-title {
-	font-size: 45px;
+.header-title {
+	font-size: 60px;
 	color: #4DD0E1;
 	padding-left: 40px;
 	padding-top: 30px;
+	text-align: left;
+	margin-top: 0px
 }
 
 .header {
@@ -33,11 +35,12 @@
 
 .footer-links {
 	font-size: 15px;
-	padding-right: 40px;
-	padding-top: 30px;
+	padding-right: 0px;
+	padding-top: 10px;
 	float: center;
 	display: inline-block;
-	  min-width: 75px;
+	min-width: 75px;
+	color: #4DD0E1;
 }
 
 .full {
@@ -83,21 +86,35 @@ form {
 	width:1000px;
 }
 
-h1 {
-	color: #fff;
-}
-
 body {
 	width: 100%;
 	background: #E0E0E0;
 }
 
+.info-body {
+	padding: 25px;
+}
+
+
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
+
+    height:24px; // Replace with the height your footer should be
+    width: 100%; // Don't change
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
+
+}   
+
+.footer_contents {
+
+    height:24px; // Replace with the height your footer should be
+    width: 1000px; // Visible width of footer
+    margin:auto;
+    text-align: center;
+
 }
