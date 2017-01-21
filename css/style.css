@@ -62,6 +62,7 @@
 
 a:link {
 	text-decoration: none;
+	color: #4DD0E1;
 }
 
 a:visited {
@@ -93,12 +94,13 @@ body {
 
 .info-body {
 	padding: 25px;
+	padding-bottom:45px;
 }
 
 
 .footer {
 
-    height:24px; // Replace with the height your footer should be
+    height:40px; // Replace with the height your footer should be
     width: 100%; // Don't change
     background-image: none;
     background-repeat: repeat;
@@ -107,14 +109,21 @@ body {
     position: fixed;
     bottom: 0pt;
     left: 0pt;
+    margin:auto;
+    right: 0;
+  	bottom: 0;
+  	left: 0;
+  	padding: 1rem;
+  	background-color: #efefef;
+  	text-align: center;
 
-}   
+}
+
 
 .footer_contents {
 
     height:24px; // Replace with the height your footer should be
     width: 1000px; // Visible width of footer
     margin:auto;
-    text-align: center;
 
 }
