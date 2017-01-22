@@ -156,8 +156,8 @@ body {
 
 .footer {
 
-    height:40px; // Replace with the height your footer should be
-    width: 100%; // Don't change
+    height:40px; 
+    width: 100%; 
     background-image: none;
     background-repeat: repeat;
     background-attachment: scroll;
@@ -178,8 +178,16 @@ body {
 
 .footer_contents {
 
-    height:24px; // Replace with the height your footer should be
-    width: 1000px; // Visible width of footer
+    height: 24px; 
+    width: 1000px; 
     margin:auto;
 
+}
+
+#editor { 
+	position: absolute;
+	top: 230px;
+	right: 45px;
+	bottom: 55px;
+	left: 600px;
 }

@@ -38,7 +38,7 @@ var socket = require('socket.io');
 
 var io = socket(server);
 
-io.sockets.on('connection', newConnection);
+io.on('connection', newConnection);
 
 
 /*io.on('connection', function(socket){
