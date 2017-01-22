@@ -1,6 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script language="javascript" type="text/javascript" src="index.js"></script>
 	
 	
 <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -16,15 +19,12 @@
     	<p class="header-title"><a href="http://cocode-mlh.com">CoCode_</a></p>
     		<p class="educators"><a href="http://cocode-mlh.com/educators.html">Educators</a></p>
     	</div>
-
-      <a href="canvas.html"><button>CLICK HERE</button></a>
-
   		<div class="row pseudo-vert">
   			<div class="col-lg-6">
-      			<input class="class-id-input form-control" type="text" placeholder="Room Code">
+      			<input id="classIdInput" class="class-id-input form-control" type="text" placeholder="Room Code">
       			<br>
       			<span class="input-group-btn">
-        			<button class="btn btn-default" type="button">Go!</button>
+        			<button class="btn btn-default" type="button" onclick="pullClassID()">Go!</button>
       			</span>
     		</div><!-- /input-group -->
   		</div><!-- /.col-lg-6 --> 
