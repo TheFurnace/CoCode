@@ -1,5 +1,5 @@
 // JavaScript Document
-import requests;
+/*import requests;
 var json;
 
 function compile(var program) {
@@ -10,4 +10,4 @@ function compile(var program) {
 	json.lang = "python";
 	
 	r = requests.post(url,json);
-}
+} */
