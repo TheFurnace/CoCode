@@ -1,0 +1,23 @@
+{
+  "name": "cocode-mlh.com",
+  "version": "1.0.0",
+  "description": "CoCode wesbite- a solution to day-to-day group learning",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/thefurnace/cocode.git"
+  },
+  "keywords": [
+    "stem",
+    "cocode"
+  ],
+  "author": "Fernando Quintero, Gabriel Guzman, Dillon Culp, Marcus Armband",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^1.7.2"
+  }
+}
