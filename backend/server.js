@@ -23,11 +23,16 @@ fs.readFile(filename, "binary", function(err, file) { //Read file
 }).listen(3000);                                      //Listening port 
 console.log("Server is listening on port 3000.");     //Terminal output */
 
+console.log("WE RUNNING");
+
 var express = require('express');
 
 var app = express();
+var http = require('http').Server(app);
+
 var server = app.listen(3000);
-app.use(express.static("./"));
+app.use(express.static("../"));
+
 
 var socket = require('socket.io');
 
@@ -35,6 +40,21 @@ var io = socket(server);
 
 io.sockets.on('connection', newConnection);
 
+
+/*io.on('connection', function(socket){
+  console.log('a user connected');
+});*/
+
+/*
+app.get('/', function(req, res){
+  res.sendFile('index.html');
+}); */
+
+//BLOCK BELOW IS SHIFFMAN
 function newConnection(socket) {
-    console.log(socket);
+    console.log(socket.id);
 }
+/*
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+}); */ 
