@@ -2,6 +2,7 @@
 var code = localStorage.getItem("code");
 var name = localStorage.getItem("name");
 var userID = Date.now();
+localStorage.setItem("userID", userID);
 
 var user {
 	this.code: code,
@@ -17,3 +18,6 @@ socket.emit('user', user);
 
 //function for what to do when server finishes pairs
 
+socket.on('move', function () {
+	window.location = "students.html";
+});

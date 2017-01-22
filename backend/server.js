@@ -101,7 +101,20 @@ function newConnection(socket) {
     });
 
     socket.on('start', function(code) {
-        // body...
+        /*
+        for (var i = 0; i < rooms.length; i++) {
+            if(new String(rooms[i].code).value() == new String(code).value()) {
+                for (var i = 0; i < 3; i++) {
+                    rooms[i]
+                }
+            }
+        }
+        */
+        socket.broadcast.emit('move');
+    });
+
+    socket.on('textUpdate', function() {
+
     });
 
 }
