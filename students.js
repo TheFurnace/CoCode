@@ -25,9 +25,6 @@ function keyTyped() { //mouseDragged
 	var text = editor.getValue();
 	console.log(text);
 
-	if(key == 7) {
-		dis();
-	}
 	
 	socketCanvas.emit('textUpdate', text);
 }
