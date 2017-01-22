@@ -1,7 +1,7 @@
 :root {
-	--bg-light: #E0E0E0;
-	--fg-light: #4DD0E1;
-	--fg-dark: #3DA6B4;
+	--bg-light: #CCDDDD;
+	--fg-light: #559988;
+	--fg-dark: #808080;
 }
 
 * {
@@ -116,7 +116,6 @@ a:visited {
 }
 
 a:hover {
-	text-decoration: underline;
 	color: var(--fg-dark);
 }
 
