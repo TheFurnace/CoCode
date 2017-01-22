@@ -56,10 +56,10 @@ function newConnection(socket) {
 
     socket.on('mouseCoords', mouseMessage);
 
-    function mouseMessage(data) {
-        socket.broadcast.emit('mouseCoords', data);
+    function mouseMessage(mouseCoords) {
+        socket.broadcast.emit('mouseCoords', mouseCoords);
 
-        console.log(data);
+        console.log(mouseCoords);
     }
 }
 /*
