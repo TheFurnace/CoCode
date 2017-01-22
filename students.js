@@ -23,6 +23,11 @@ function newDrawing(mouseCoords) {
 
 function keyTyped() { //mouseDragged
 	var text = editor.getValue();
+	console.log(text);
+
+	if(key == 7) {
+		dis();
+	}
 	
 	socketCanvas.emit('textUpdate', text);
 }
@@ -31,20 +36,24 @@ function textUpdated(textUpdate) {  //newDrawing
 	editor.setValue(textUpdate);
 }
 
+var RUNNING = true;
+
 function mouseDragged() {
-	noStroke();
-	fill(255);
-	var mouseCoords = {
-		x: mouseX,
-		y: mouseY
+	if(RUNNING) {
+		noStroke();
+		fill(255);
+		var mouseCoords = {
+			x: mouseX,
+			y: mouseY
+		}
+
+		socketCanvas.emit('mouseCoords', mouseCoords);
+
+		ellipse(mouseX, mouseY, 36, 36);
 	}
-
-	socketCanvas.emit('mouseCoords', mouseCoords);
-
-	ellipse(mouseX, mouseY, 36, 36);
 	
 }
 
-function draw() {
-	
+function dis() {
+	RUNNING = false;
 }
