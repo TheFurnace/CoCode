@@ -20,6 +20,15 @@
 	margin-top: 0px
 }
 
+.problem-text{
+	font-size: 20px;
+	color: black;
+	padding: 20px;
+	padding-bottom: 45px;
+	margin-top: 30px;
+	text-align: center;
+}
+
 .header {
 	color: var(--fg-light);
 }
