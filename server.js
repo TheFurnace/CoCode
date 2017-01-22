@@ -1,5 +1,6 @@
 //nodejs.org/api for API docs
-//Node.js web server                         
+//Node.js web server     
+/*                    
 var http = require("http"),                           //Import Node.js modules
     url = require("url"),                             
     path = require("path"),
@@ -20,4 +21,14 @@ fs.readFile(filename, "binary", function(err, file) { //Read file
     response.end();                                   //Signals to server that 
  });                                                  //header and body sent
 }).listen(3000);                                      //Listening port 
-console.log("Server is listening on port 3000.")      //Terminal output
+console.log("Server is listening on port 3000.");     //Terminal output */
+
+var express = require('express');
+
+var app = express();
+var server = app.listen(3000);
+app.use(express.static("./"));
+
+var socket = require('socket.io');
+
+var io = socket(server);
