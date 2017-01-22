@@ -1,7 +1,4 @@
-var code = Date.now().toString;
-code = new String(code).substring(code.length-6, code.length-1);
-console.log(code);
-
+var code = "abc"
 //document.getElementById('roomCode').innerHTML = code;
 
 var socket = io.connect('45.79.221.136:3000');
