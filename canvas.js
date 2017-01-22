@@ -7,7 +7,7 @@ function setup() {
 	console.log("canvas created");
 
 	socketCanvas = io.connect('45.79.221.136:3000');
-	socketCanvas.on('mouse', newDrawing);
+	socketCanvas.on('mouseCoords', newDrawing);
 
 }
 

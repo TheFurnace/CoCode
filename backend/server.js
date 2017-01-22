@@ -54,10 +54,10 @@ app.get('/', function(req, res){
 function newConnection(socket) {
     console.log(socket.id);
 
-    socket.on('mouse', mouseMessage);
+    socket.on('mouseCoords', mouseMessage);
 
     function mouseMessage(data) {
-        socket.broadcast.emit('mouse', data);
+        socket.broadcast.emit('mouseCoords', data);
 
         console.log(data);
     }
