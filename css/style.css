@@ -191,3 +191,13 @@ body {
 	margin-left: 20px;
 	
 }
+
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
+}

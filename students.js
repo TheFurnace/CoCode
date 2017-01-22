@@ -2,9 +2,11 @@ var socketCanvas;
 var canvas;
 
 function setup() {
-	canvas = createCanvas(1000,900);
+	canvas = createCanvas(500,500);
 	background(51);
 	console.log("canvas created");
+
+	canvas.parent('dabox');
 
 	socketCanvas = io.connect('45.79.221.136:3000');
 	socketCanvas.on('mouseCoords', newDrawing);
