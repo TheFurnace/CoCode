@@ -81,6 +81,11 @@ function newConnection(socket) {
 
     }
 
+    socket.on('mouseCoords', mouseMsg);
+    function mouseMsg(mouseCoords) {
+        socket.broadcast.emit('mouseCoords', mouseCoords);
+    }
+
     socket.on('createRoom', function(code){
         rooms.push(new classRoom(code));
     });
