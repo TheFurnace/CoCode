@@ -1,5 +1,6 @@
 var code = Date.now().toString;
 code = new String(code).substring(code.length-6, code.length-1);
+console.log(code);
 
 Document.getElementById('roomCode').innerHTML = code;
 
