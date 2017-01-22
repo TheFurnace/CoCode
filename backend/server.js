@@ -23,7 +23,6 @@ fs.readFile(filename, "binary", function(err, file) { //Read file
 }).listen(3000);                                      //Listening port 
 console.log("Server is listening on port 3000.");     //Terminal output */
 
-console.log("WE RUNNING");
 
 var express = require('express');
 
@@ -40,6 +39,14 @@ var io = socket(server);
 
 io.on('connection', newConnection);
 
+var classRoom = function(code) {
+    this.code = code;
+    this.clients = [];
+}
+
+var rooms = [];
+
+console.log("Listening on port 3000.");
 
 /*io.on('connection', function(socket){
   console.log('a user connected');
@@ -54,13 +61,39 @@ app.get('/', function(req, res){
 function newConnection(socket) {
     console.log(socket.id);
 
-    socket.on('mouseCoords', mouseMessage);
+    socket.on('user', sortUser);
 
-    function mouseMessage(mouseCoords) {
-        socket.broadcast.emit('mouseCoords', mouseCoords);
+    function sortUser(user) {
 
-        console.log(mouseCoords);
+
+        var idExists = false;
+        for (var i = 0; i < rooms.length && idExists == false; i++) {
+            if(element.code == user.code) {
+                element.clients.push(user);
+                break;
+                idExists = true;
+            }
+        };
+
+        if(!idExists) {
+            window.location = "../index.html";
+        }
+
     }
+
+    socket.on('createRoom', function(code){
+        rooms.push(new classRoom(code));
+    });
+
+    socket.on('destroy', function(code) {
+        for (var i = 0; i < rooms.length && idExists == false; i++) {
+            if(element.code == user.code) {
+                element.clients.push(user);
+                break;
+                idExists = true;
+            }
+        };
+    });
 }
 /*
 http.listen(3000, function(){

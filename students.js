@@ -2,7 +2,7 @@ var socketCanvas;
 var canvas;
 
 function setup() {
-	canvas = createCanvas(500,500);
+	canvas = createCanvas(550,450);
 	background(51);
 	console.log("canvas created");
 

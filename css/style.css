@@ -187,7 +187,22 @@ body {
 #editor { 
 	position: absolute;
 	height: 450px;
-	width: 650px;
+	width: 48%;
+	right: 20px;
+	float: right;
+}
+
+#dabox {
+	float: left;
 	margin-left: 20px;
-	
+}
+
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
 }
