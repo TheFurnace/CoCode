@@ -23,6 +23,8 @@ fs.readFile(filename, "binary", function(err, file) { //Read file
 }).listen(3000);                                      //Listening port 
 console.log("Server is listening on port 3000.");     //Terminal output */
 
+console.log("WE RUNNING");
+
 var express = require('express');
 
 var app = express();
@@ -45,6 +47,7 @@ app.get('/', function(req, res){
 
 function newConnection(socket) {
     console.log(socket.id);
+
 }
 
 /*
