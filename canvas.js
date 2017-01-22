@@ -14,7 +14,7 @@ function setup() {
 function newDrawing(mouseCoords) {
 	noStroke();
 	fill(255, 0, 100);
-	ellipse(mouseCoords.x, data.y, 36, 36);
+	ellipse(mouseCoords.x, mouseCoords.y, 36, 36);
 
 }
 
