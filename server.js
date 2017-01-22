@@ -30,8 +30,10 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 
+console.log("pre lister");
 var server = app.listen(3000);
 app.use(express.static("../"));
+console.log("post listen");
 
 var socket = require('socket.io');
 
