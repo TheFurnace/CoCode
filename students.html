@@ -27,8 +27,8 @@
 		<div id="dabox">
 
 		</div>
-
-		<div style="display: inline-block" id="editor">#!/usr/bin/env python                                                                                                                                                                           
+		
+		<div id="editor">#!/usr/bin/env python                                                                                                                                                                           
 import sys
 
 def main():
@@ -36,17 +36,15 @@ def main():
 	//code here
 
 main();</div>
-			
+	
 		<script src="./src/ace.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			var editor = ace.edit("editor");
 			editor.setTheme("ace/theme/solarized");
 			editor.getSession().setMode("ace/mode/python");
 		</script>
-		
-		<div style="display:inline-block" id="dabox">
-			
-		</div>
+
+		<div id="dabox" style="right: 0px"></div>
 
 		<div class="center-me" style="border: 20px; margin-top:500px; margin-bottom:50px;">
     		<button class="button">Check Code</button>
