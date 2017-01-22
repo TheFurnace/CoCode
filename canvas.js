@@ -26,7 +26,7 @@ function mouseDragged() {
 		y: mouseY
 	}
 
-	socket.emit('mouseCoords', mouseCoords);
+	socketCanvas.emit('mouseCoords', mouseCoords);
 
 	ellipse(mouseX, mouseY, 36, 36);
 	
