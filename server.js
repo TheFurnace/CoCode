@@ -40,9 +40,9 @@ var io = socket(server);
 io.sockets.on('connection', newConnection);
 
 
-io.on('connection', function(socket){
+/*io.on('connection', function(socket){
   console.log('a user connected');
-});
+});*/
 
 /*
 app.get('/', function(req, res){
@@ -50,10 +50,9 @@ app.get('/', function(req, res){
 }); */
 
 //BLOCK BELOW IS SHIFFMAN
-/*function newConnection(socket) {
+function newConnection(socket) {
     console.log(socket.id);
 
-}*/
 
 /*
 http.listen(3000, function(){
