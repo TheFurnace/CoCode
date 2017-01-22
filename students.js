@@ -28,7 +28,7 @@ function keyTyped() { //mouseDragged
 }
 
 function textUpdated(textUpdate) {  //newDrawing
-	editor.setValue();
+	editor.setValue(textUpdate);
 }
 
 function mouseDragged() {
