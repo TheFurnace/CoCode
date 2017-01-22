@@ -53,6 +53,14 @@ app.get('/', function(req, res){
 //BLOCK BELOW IS SHIFFMAN
 function newConnection(socket) {
     console.log(socket.id);
+
+    socket.on('mouse', mouseMessage);
+
+    function mouseMessage(data) {
+        socket.broadcast.emit('mouse', data);
+
+        console.log(data);
+    }
 }
 /*
 http.listen(3000, function(){
