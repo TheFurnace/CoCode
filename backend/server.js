@@ -88,12 +88,22 @@ function newConnection(socket) {
     socket.on('destroy', function(code) {
         for (var i = 0; i < rooms.length && idExists == false; i++) {
             if(element.code == user.code) {
-                element.clients.push(user);
+                console.log(user.code + " destroyed")
+                element.splice(index, i);
+                
                 break;
-                idExists = true;
             }
         };
     });
+
+    socket.on('destroyAll', function() {
+        rooms = [];
+    });
+
+    socket.on('start', function(code) {
+        // body...
+    });
+
 }
 /*
 http.listen(3000, function(){
