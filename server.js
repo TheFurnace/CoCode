@@ -26,6 +26,8 @@ console.log("Server is listening on port 3000.");     //Terminal output */
 var express = require('express');
 
 var app = express();
+var http = require('http').Server(app);
+
 var server = app.listen(3000);
 app.use(express.static("../"));
 
@@ -35,6 +37,16 @@ var io = socket(server);
 
 io.sockets.on('connection', newConnection);
 
+
+
+app.get('/', function(req, res){
+  res.sendFile('index.html');
+});
+
 function newConnection(socket) {
     console.log(socket.id);
 }
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
