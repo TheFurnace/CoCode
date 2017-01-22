@@ -1,4 +1,4 @@
-var socket;
+var socketCanvas;
 var canvas;
 
 function setup() {
@@ -6,7 +6,7 @@ function setup() {
 	background(51);
 	console.log("canvas created");
 
-	socket = io.connect('http://CoCode-mlh:3000');
+	socketCanvas = io.connect('http://CoCode-mlh:3000');
 
 
 }
