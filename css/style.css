@@ -186,8 +186,8 @@ body {
 
 #editor { 
 	position: absolute;
-	top: 230px;
-	right: 45px;
-	bottom: 55px;
-	left: 600px;
+	height: 450px;
+	width: 650px;
+	margin-left: 20px;
+	
 }
