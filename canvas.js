@@ -5,8 +5,12 @@ function setup() {
 	canvas = createCanvas(600,400);
 	background(51);
 	console.log("canvas created")
-	
-	socket = io.connect('http://CoCode-mlh:3000');
+
+	try{
+		socket = io.connect('http://CoCode-mlh:3000');
+	} catch (e) {
+		console.log(e);
+	}
 
 }
 
