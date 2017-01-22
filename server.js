@@ -30,10 +30,9 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 
-console.log("pre lister");
 var server = app.listen(3000);
 app.use(express.static("../"));
-console.log("post listen");
+
 
 var socket = require('socket.io');
 
@@ -54,7 +53,6 @@ app.get('/', function(req, res){
 //BLOCK BELOW IS SHIFFMAN
 function newConnection(socket) {
     console.log(socket.id);
-
 }
 /*
 http.listen(3000, function(){
