@@ -91,15 +91,15 @@
     
     display: block;
     font-size: 16px;
-    margin: 4px 2px;
     -webkit-transition-duration: 0.8s; /* Safari */
     transition-duration: 0.8s;
     cursor: pointer;
-    margin: 0 auto;
+    max-width: 200px;
 }
 
 .center-me {
-  margin: 0 auto;
+    margin: 0 auto;
+    width: 1000px;
 }
 
 .button1 {
@@ -205,4 +205,15 @@ body {
 }
 #right {
   flex: 1;
+}
+
+.welcome-text {
+	font-size: 40px;
+	margin-top: 150px;
+	margin-left: 45px;
+}
+
+.welcome-subtext {
+    font-size: 18px;
+    margin-left: 45px;
 }
