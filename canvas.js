@@ -22,7 +22,7 @@ function mouseDragged() {
 	noStroke();
 	fill(255);
 	var mouseCoords = {
-		x: mouseX
+		x: mouseX,
 		y: mouseY
 	}
 
