@@ -14,7 +14,7 @@ function setup() {
 function newDrawing(mouseCoords) {
 	noStroke();
 	fill(255, 0, 100);
-	ellipse(mouseCoords.x, mouseCoords.y, 36, 36);
+	ellipse(mouseCoords.x, mouseCoords.y, 8, 8);
 
 }
 
@@ -28,7 +28,7 @@ function mouseDragged() {
 
 	socketCanvas.emit('mouseCoords', mouseCoords);
 
-	ellipse(mouseX, mouseY, 36, 36);
+	ellipse(mouseX, mouseY, 8, 8);
 	
 }
 
