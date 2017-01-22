@@ -55,5 +55,5 @@ function mouseDragged() {
 }
 
 function dis() {
-	RUNNING = false;
+	RUNNING = !RUNNING;
 }
