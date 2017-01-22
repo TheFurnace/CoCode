@@ -15,7 +15,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>CoCode_</title>
         <script src="//fast.eager.io/RdPQkTjaJn.js"></script>
-        <script>RUNNING = false;</script>
+        <script>
+        	RUNNING = false;
+        </script>
     </head>
     <body>
     	<div class="header">
@@ -43,6 +45,7 @@ main();</div>
 			var editor = ace.edit("editor");
 			editor.setTheme("ace/theme/solarized");
 			editor.getSession().setMode("ace/mode/python");
+			editor.setReadOnly(true);
 		</script>
 
 		<div id="dabox" style="right: 0px"></div>
