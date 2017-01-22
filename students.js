@@ -10,6 +10,7 @@ function setup() {
 
 	socketCanvas = io.connect('45.79.221.136:3000');
 	socketCanvas.on('mouseCoords', newDrawing);
+	socketCanvas.on('textUpdate', textUpdated);
 
 }
 
@@ -18,6 +19,16 @@ function newDrawing(mouseCoords) {
 	fill(255, 0, 100);
 	ellipse(mouseCoords.x, mouseCoords.y, 36, 36);
 
+}
+
+function keyTyped() { //mouseDragged
+	var text = editor.getValue();
+	
+	socketCanvas.emit('textUpdate', text);
+}
+
+function textUpdated(textUpdate) {  //newDrawing
+	editor.setValue();
 }
 
 function mouseDragged() {
