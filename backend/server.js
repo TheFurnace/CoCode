@@ -38,9 +38,7 @@ var socket = require('socket.io');
 
 var io = socket(server);
 
-io.on('connection', new function (socket) {
-    console.log(socket.id);
-});
+io.on('connection', newConnection);
 
 
 /*io.on('connection', function(socket){
@@ -52,6 +50,10 @@ app.get('/', function(req, res){
   res.sendFile('index.html');
 }); */
 
+//BLOCK BELOW IS SHIFFMAN
+function newConnection(socket) {
+    console.log(socket.id);
+}
 /*
 http.listen(3000, function(){
   console.log('listening on *:3000');
